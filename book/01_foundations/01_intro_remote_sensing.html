@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>&lt;no title&gt; &#8212; Quantitative Remote Sensing with Python</title>
+    <title>Remote sensing fundamentals &#8212; Quantitative Remote Sensing with Python</title>
   
   
   
@@ -57,6 +57,8 @@
     <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'book/01_foundations/01_intro_remote_sensing';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -173,7 +175,10 @@
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Remote sensing fundamentals</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
+</ul>
+</details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../appendices/A_python_env.html">A python env</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../appendices/B_resources.html">B resources</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../appendices/C_glossary.html">C glossary</a></li>
@@ -382,11 +387,35 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1><no title></h1>
+    <h1>Remote sensing fundamentals</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-remote-sensing">What is Remote Sensing?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#figure-1-electromagnetic-spectrum">Figure 1. Electromagnetic spectrum.</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#remote-sensing-of-vegetation">Remote sensing of vegetation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#leaf-level">Leaf level</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#figure-2-leaf-structure-and-interaction-with-light">Figure 2. Leaf structure and interaction with light.</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#canopy-level">Canopy level</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#figure-3-canopy-struture-leaf-angular-distribution-and-light-transmitance">Figure 3. Canopy struture (leaf angular distribution) and light transmitance.</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#figure-4-incident-angle-on-canopy-leaves-can-be-calculated-from-sun-position-solar-zenith-angel-and-azimuth-angle-and-leaf-inclination-angles">Figure 4. Incident angle on canopy leaves can be calculated from sun position (solar zenith angel and azimuth angle) and leaf inclination angles.</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#canopy-reflectance-is-is-entangle-with-soil-background">Canopy reflectance is is entangle with soil background</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -396,8 +425,50 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <div class="toctree-wrapper compound">
+  <section class="tex2jax_ignore mathjax_ignore" id="remote-sensing-fundamentals">
+<h1>Remote sensing fundamentals<a class="headerlink" href="#remote-sensing-fundamentals" title="Link to this heading">#</a></h1>
+<section id="what-is-remote-sensing">
+<h2>What is Remote Sensing?<a class="headerlink" href="#what-is-remote-sensing" title="Link to this heading">#</a></h2>
+<p>Remote sensing is an approach to obtain information about an object or area from a distance by detecting and measuring electromagnetic radiation, using ground-based, airborne, or spaceborne platforms.</p>
+<p><img alt="Remote sensing concept" src="book/01_foundations/images/fig1.png" /></p>
+<section id="figure-1-electromagnetic-spectrum">
+<h3>Figure 1. Electromagnetic spectrum.<a class="headerlink" href="#figure-1-electromagnetic-spectrum" title="Link to this heading">#</a></h3>
+<p>The electromagnetic spectrum showing the range of wavelengths from gamma rays to radio waves. (resource: <a class="reference external" href="https://appliedsciences.nasa.gov/sites/default/files/2022-11/Fundamentals_of_RS_Edited_SC.pdf">https://appliedsciences.nasa.gov/sites/default/files/2022-11/Fundamentals_of_RS_Edited_SC.pdf</a>)</p>
+</section>
+</section>
+<section id="remote-sensing-of-vegetation">
+<h2>Remote sensing of vegetation<a class="headerlink" href="#remote-sensing-of-vegetation" title="Link to this heading">#</a></h2>
+<section id="leaf-level">
+<h3>Leaf level<a class="headerlink" href="#leaf-level" title="Link to this heading">#</a></h3>
+<p><img alt="leaf structure" src="book/01_foundations/images/fig2.png" /></p>
+<section id="figure-2-leaf-structure-and-interaction-with-light">
+<h4>Figure 2. Leaf structure and interaction with light.<a class="headerlink" href="#figure-2-leaf-structure-and-interaction-with-light" title="Link to this heading">#</a></h4>
+</section>
+</section>
+<section id="canopy-level">
+<h3>Canopy level<a class="headerlink" href="#canopy-level" title="Link to this heading">#</a></h3>
+<p><img alt="canopy" src="book/01_foundations/images/fig3-1.png" /></p>
+<section id="figure-3-canopy-struture-leaf-angular-distribution-and-light-transmitance">
+<h4>Figure 3. Canopy struture (leaf angular distribution) and light transmitance.<a class="headerlink" href="#figure-3-canopy-struture-leaf-angular-distribution-and-light-transmitance" title="Link to this heading">#</a></h4>
+<p><img alt="leaf inclination" src="book/01_foundations/images/fig3-2.png" /></p>
+</section>
+<section id="figure-4-incident-angle-on-canopy-leaves-can-be-calculated-from-sun-position-solar-zenith-angel-and-azimuth-angle-and-leaf-inclination-angles">
+<h4>Figure 4. Incident angle on canopy leaves can be calculated from sun position (solar zenith angel and azimuth angle) and leaf inclination angles.<a class="headerlink" href="#figure-4-incident-angle-on-canopy-leaves-can-be-calculated-from-sun-position-solar-zenith-angel-and-azimuth-angle-and-leaf-inclination-angles" title="Link to this heading">#</a></h4>
+</section>
+</section>
+<section id="canopy-reflectance-is-is-entangle-with-soil-background">
+<h3>Canopy reflectance is is entangle with soil background<a class="headerlink" href="#canopy-reflectance-is-is-entangle-with-soil-background" title="Link to this heading">#</a></h3>
+<p>Two models to simplify the canopy reflectance when there is a soil background.
+<img alt="Kulbelka-Munk" src="book/01_foundations/images/fig4-1.png" />
+<img alt="Hampke" src="book/01_foundations/images/fig4-2.png" /></p>
+<p>Both models can lead to the relationship between LIA and Top-of-Canopy reflectance (R)</p>
+<p><span class="math notranslate nohighlight">\(LAI~=-\frac 1 K log \frac {R{\infty}-R}{R_{\infty}-R_{soil}}\)</span></p>
+<p>which finaly leads to the formulation of PPI, using DVI instead of a single band reflectance.</p>
+</section>
+</section>
+<div class="toctree-wrapper compound">
 </div>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -408,16 +479,16 @@ document.write(`
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "python"
+            mode: "geo"
         },
         kernelOptions: {
-            name: "python3",
+            name: "geo",
             path: "./book/01_foundations"
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'python3'</script>
+    <script>kernelName = 'geo'</script>
 
                 </article>
               
@@ -453,6 +524,37 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-remote-sensing">What is Remote Sensing?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#figure-1-electromagnetic-spectrum">Figure 1. Electromagnetic spectrum.</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#remote-sensing-of-vegetation">Remote sensing of vegetation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#leaf-level">Leaf level</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#figure-2-leaf-structure-and-interaction-with-light">Figure 2. Leaf structure and interaction with light.</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#canopy-level">Canopy level</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#figure-3-canopy-struture-leaf-angular-distribution-and-light-transmitance">Figure 3. Canopy struture (leaf angular distribution) and light transmitance.</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#figure-4-incident-angle-on-canopy-leaves-can-be-calculated-from-sun-position-solar-zenith-angel-and-azimuth-angle-and-leaf-inclination-angles">Figure 4. Incident angle on canopy leaves can be calculated from sun position (solar zenith angel and azimuth angle) and leaf inclination angles.</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#canopy-reflectance-is-is-entangle-with-soil-background">Canopy reflectance is is entangle with soil background</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

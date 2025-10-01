@@ -1,0 +1,17 @@
+title: "Quantitative Remote Sensing with Python"
+author: "Hongxiao Jin et al."
+logo: ""
+language: "en"
+
+execute:
+  execute_notebooks: "off"
+
+html:
+  use_repository_button: true
+  use_issues_button: true
+  use_edit_page_button: true
+
+repository:
+  url: https://github.com/expert-onrs/quantitative-remote-sensing-python
+  path_to_book: "book"
+  branch: main

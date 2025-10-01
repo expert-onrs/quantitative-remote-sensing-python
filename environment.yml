@@ -1,0 +1,25 @@
+name: qrs-python
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - jupyterlab
+  - notebook
+  - numpy
+  - scipy
+  - pandas
+  - matplotlib
+  - geopandas
+  - rasterio
+  - xarray
+  - scikit-learn
+  - dask
+  - netcdf4
+  - h5netcdf
+  - pip
+  - pip:
+      - jupyter-book
+      - folium
+      - earthengine-api
+      - torch
+      - tensorflow

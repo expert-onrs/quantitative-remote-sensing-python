@@ -1,0 +1,29 @@
+format: jb-book
+root: book/intro
+
+chapters:
+- file: book/01_foundations/01_intro_remote_sensing
+  sections:
+  - file: book/01_foundations/02_radiometry_basics
+  - file: book/01_foundations/03_data_sources
+
+- file: book/02_core_methods/04_spectral_indices
+  sections:
+  - file: book/02_core_methods/05_preprocessing
+  - file: book/02_core_methods/06_time_series
+
+- file: book/03_advanced_apps/07_classification
+  sections:
+  - file: book/03_advanced_apps/08_variable_retrieval
+  - file: book/03_advanced_apps/09_sar_basics
+
+- file: book/04_future/12_big_data_cloud
+  sections:
+  - file: book/04_future/13_ml_dl
+  - file: book/04_future/14_outlook
+
+- file: book/appendices/A_python_env
+  sections:
+  - file: book/appendices/B_resources
+  - file: book/appendices/C_glossary
+  - file: book/appendices/D_projects

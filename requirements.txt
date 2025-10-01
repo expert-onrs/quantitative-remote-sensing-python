@@ -1,0 +1,15 @@
+jupyter-book
+numpy
+pandas
+matplotlib
+geopandas
+rasterio
+xarray
+scikit-learn
+dask
+netcdf4
+h5netcdf
+folium
+earthengine-api
+torch
+tensorflow
